@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-sm-6">
+      <div *ngFor="let employee of employees">
+        <div class="card">
+          <div class="container">
+            <img
+              src="https://www.w3schools.com/howto/img_avatar.png"
+              alt="Avatar"
+              style="width: 20%"/>
+            <h4><b>{{ employee.name }}</b></h4>
+            <p>{{ employee.address.email }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  <button type="submit"  class="btn btn-primary">Class A</button>
+  <div class="col-sm-6">
+    <div class="container">
+      <form class="form-horizontal" (ngSubmit)="onSubmit()" #empForm="ngForm">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="fullname">Full Name:</label>
+          <div class="col-sm-4">
+            <input
+                type="text" class="form-control" id="fullname" placeholder="Enter Full Name" ngModel name="fullname"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="lastname">Last Name:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" ngModel name="lastname"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="division">Division:</label>
+          <div class="col-sm-4">
+            <input
+                type="text" class="form-control" id="division" placeholder="Enter Division" ngModel name="division"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-6">
+            <button type="submit"   class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr/>
+  <app-home ></app-home>
+  </div>
